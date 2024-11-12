@@ -70,3 +70,12 @@ class Game:
         else:
             print(f"{self.computer.name} победил!")
 
+def main():
+    player_name = input("Введите имя вашего героя: ")
+    computer_name = "Компьютер"
+
+    game = Game(player_name, computer_name)
+    game.start()
+
+if __name__ == "__main__":
+    main()
