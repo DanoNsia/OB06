@@ -33,3 +33,13 @@ class Hero:
         self.name = name
         self.health = health
         self.attack_power = attack_power
+
+    def attack(self, other):
+        if not isinstance(other, Hero):
+            raise ValueError("The target must be an instance of Hero class")
+
+        other.health -= self.attack_power
+        print(f"{self.name} атаковал {other.name} и нанес {self.attack_power} урона.")
+
+    def is_alive(self):
+        return self.health > 0
