@@ -43,3 +43,10 @@ class Hero:
 
     def is_alive(self):
         return self.health > 0
+
+class Game:
+    def __init__(self, player_name, computer_name):
+        self.player = Hero(player_name)
+        self.computer = Hero(computer_name)
+
+    
